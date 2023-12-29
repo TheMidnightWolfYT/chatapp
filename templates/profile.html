@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="/static/styles.css" rel="stylesheet">
+        <title>Chat App</title>
+    </head>
+    <body>
+        <form action="/home" method="post">
+            <input type="submit" value="Home">
+        </form>
+        <section class="center">
+            <h2>{{ name }}</h2>
+            <!--<h3> display-name </h3>-->
+            <hr>
+            <h3>Change Password</h3>
+            <form action="/p-change" method="post">
+                <input name="password" placeholder="Current Password" type="password" required>
+                <input name="npassword" placeholder="New Password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                <input name="n2password" placeholder="New Password (again)" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                <input type="submit" value="Change Password">
+            </form>
+            <!--<hr>
+            <h3>Change Display Name</h3>
+            <form action="/dn-change" method="post">
+                <input name="display-name" placeholder="Display Name" type="text" required>
+                <input type="submit" value="Change Display Name">
+            </form> -->
+        </section>
+    </body>
+</html>
